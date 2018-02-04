@@ -18,6 +18,11 @@ class Clock extends React.Component {
     clearTimeList() {
        const list = document.getElementsByTagName('ul')[0];
        list.innerHTML = '';
+       this.setState({times: {
+               minutes: 0,
+               seconds: 0,
+               miliseconds: 0
+           }});
     }
 
     save() {
