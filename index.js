@@ -1,8 +1,8 @@
 class Clock extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
-            display: '',
+            display: '00 : 00 : 00',
             running: false,
             times: {
                 minutes: 0,
@@ -23,6 +23,12 @@ class Clock extends React.Component {
                seconds: 0,
                miliseconds: 0
            }});
+        const a ={times: {
+            minutes: 0,
+                seconds: 0,
+                miliseconds: 0
+        }};
+       this.setState({display : '00 : 00 : 00'});
     }
 
     save() {

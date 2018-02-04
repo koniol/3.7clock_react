@@ -11,13 +11,13 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Clock = function (_React$Component) {
     _inherits(Clock, _React$Component);
 
-    function Clock() {
+    function Clock(props) {
         _classCallCheck(this, Clock);
 
-        var _this = _possibleConstructorReturn(this, (Clock.__proto__ || Object.getPrototypeOf(Clock)).call(this));
+        var _this = _possibleConstructorReturn(this, (Clock.__proto__ || Object.getPrototypeOf(Clock)).call(this, props));
 
         _this.state = {
-            display: '',
+            display: '00 : 00 : 00',
             running: false,
             times: {
                 minutes: 0,
@@ -41,6 +41,12 @@ var Clock = function (_React$Component) {
                     seconds: 0,
                     miliseconds: 0
                 } });
+            var a = { times: {
+                    minutes: 0,
+                    seconds: 0,
+                    miliseconds: 0
+                } };
+            this.setState({ display: '00 : 00 : 00' });
         }
     }, {
         key: 'save',
